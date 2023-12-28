@@ -10,7 +10,7 @@ class MyHashMap<K, V> {
         this.bucketArray = new LinkedList[numBuckets];
     }
 
-    private int getBucketIndex(K key) {
+    int getBucketIndex(K key) {
         int hashCode = key.hashCode();
         return Math.abs(hashCode) % numBuckets;
     }

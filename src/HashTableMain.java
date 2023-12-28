@@ -1,6 +1,7 @@
 public class HashTableMain {
     public static void main(String[] args) {
         MyHashMap<String, Integer> myHashMap = new MyHashMap<>();
+    
         String paragraph = "Paranoids are not paranoid because they are paranoid "
                 + "but because they keep putting themselves deliberately into paranoid avoidable situations";
         String[] words = paragraph.toLowerCase().split(" ");
@@ -14,6 +15,15 @@ public class HashTableMain {
             }
         }
 
+        myHashMap.display();
+
+
+        
+
+      
+        myHashMap.bucketArray[myHashMap.getBucketIndex("avoidable")].clear();
+
+        
         myHashMap.display();
     }
 }
