@@ -1,8 +1,9 @@
 public class HashTableMain {
     public static void main(String[] args) {
         MyHashMap<String, Integer> myHashMap = new MyHashMap<>();
-        String sentence = "To be or not to be";
-        String[] words = sentence.toLowerCase().split(" ");
+        String paragraph = "Paranoids are not paranoid because they are paranoid "
+                + "but because they keep putting themselves deliberately into paranoid avoidable situations";
+        String[] words = paragraph.toLowerCase().split(" ");
 
         for (String word : words) {
             Integer frequency = myHashMap.get(word);
@@ -16,3 +17,7 @@ public class HashTableMain {
         myHashMap.display();
     }
 }
+
+
+
+
